@@ -10,10 +10,6 @@ h2{
    color: red;
 }
 
-.one{
-
-   //background: #FF425D;
-}
 .one img{
    position: relative;
    height:20vh;
@@ -30,18 +26,6 @@ form input{
    width: 60vh;
    border-radius: 5px;
    border: solid #ff425d 2px;
-}
-form button {
-   background: #e3e3e3;
-   
-}
-.one{
-   background: #F05B4A;
-   
-}
-.one{
-
-   background: #FF425D;
 }
 form button {
    margin-left: 20px;
@@ -123,7 +107,7 @@ footer p{
     width: 30vw;
     display: inline-block;
     margin-left: 15vw;
-    
+
 }
 .left1 {
     vertical-align: top;
