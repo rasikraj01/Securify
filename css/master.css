@@ -9,6 +9,10 @@
 h2{
    color: red;
 }
+.one h1 {
+    font-family: cursive;
+    color: #ffffff;
+}
 .one img{
    position: relative;
    height:20vh;
@@ -28,11 +32,10 @@ form button {
    
 }
 .one{
-
-   background: #FF425D;
+   background: #F05B4A;
 }
 .two{
-   background: blue;
+   background: #fff;
 }
 section{
    height: 100vh;
@@ -40,10 +43,48 @@ section{
 footer{
    background: #122232;
    color: #e3e3e3;
-   //height: 10vh;
+   /*height: 10vh;*/
    text-align: center;
 }
 
 footer p{
    padding: 10px;
+}
+
+.left {
+    font-size: 20px;
+    padding: 0 10px;
+    vertical-align: top;
+    width: 40vw;
+    display: inline-block;
+    margin: 5vh 10vw;
+}
+.right {
+    vertical-align: top;
+    display: inline;
+    width: 40vw;
+    margin-right: 0px;
+}
+.right img {
+    width:300px;
+    height: 300px;
+}
+.right1 {
+    font-size: 20px;
+    padding: 0 10px;
+    vertical-align: top;
+    width: 40vw;
+    display: inline-block;
+    margin-left: 7vw;
+    
+}
+.left1 {
+    vertical-align: top;
+    display: inline;
+    width: 40vw;
+    margin: 5vh 10vw;
+}
+.left1 img {
+    width:300px;
+    height: 300px;
 }
