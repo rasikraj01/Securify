@@ -7,7 +7,9 @@
    padding: 0;
 }
 h2{
-   color: red;
+    color: #ff425d;
+    font-size: 50px;
+    font-weight: 300;
 }
 
 .one img{
@@ -117,7 +119,9 @@ footer p{
     height: 350px;
     padding: 25px 25%;
 }
-
+.two .content{
+   font-weight: 100;
+}
 #map {
    /*z-index: -1;
    //position: absolute;
@@ -134,6 +138,5 @@ footer p{
 }
 
 .hideme {
-    opacity: 0;  
+    opacity: 0;
 }
-
