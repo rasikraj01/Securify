@@ -30,12 +30,7 @@
     async defer></script>
 
     <center>
-       <img src="" alt="">
-    <form class="" action="index.html" method="post">
-       <input type="text" name="" value="" placeholder="Enter Location"/>
-       <button type="submit" name="button">SEARCH</button>
-    </form>
-
+       <div class="button">START</div>
     </center>
 
 
@@ -59,7 +54,7 @@
             <center><h2>HOW IT WORKS</h2></center>
             <div class="content">
                 <br><br>
-               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </div>
          </div>
       </section>
@@ -80,6 +75,10 @@
 
         }
                })
+           });
+           $('.button').click(function () {
+              $('#map').css({'filter': 'blur(0px)'});
+              $(this).css({'display': 'none'});
            });
        </script>
    </body>
