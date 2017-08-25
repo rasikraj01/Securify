@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+*{
+   font-family: 'Roboto';
+   margin: 0;
+   padding: 0;
+}
+h2{
+   color: red;
+}
+.one img{
+   position: relative;
+   height:20vh;
+
+}
+.one form{
+   height: 10vh;
+background: #ffffff;
+   margin-top:
+}
+form input{
+   height: 30px;
+   width: 70vh;
+}
+form button {
+   background: #e3e3e3;
+   
+}
+.one{
+
+   background: #FF425D;
+}
+.two{
+   background: blue;
+}
+section{
+   height: 100vh;
+}
+footer{
+   background: #122232;
+   color: #e3e3e3;
+   //height: 10vh;
+   text-align: center;
+}
+
+footer p{
+   padding: 10px;
+}
