@@ -32,7 +32,15 @@ form input{
 }
 form button {
    background: #e3e3e3;
+   
+}
+.one{
+   background: #F05B4A;
+   
+}
+.one{
 
+   background: #FF425D;
 }
 form button {
    margin-left: 20px;
@@ -70,15 +78,15 @@ button:hover {
 }
 
 .two{
-   background: blue;
+   background: #fff;
 }
 section{
-   height: 100vh;
+   min-height: 100vh;
 }
 footer{
    background: #122232;
    color: #e3e3e3;
-   //height: 10vh;
+   /*height: 10vh;*/
    text-align: center;
 }
 
@@ -86,6 +94,46 @@ footer p{
    padding: 10px;
 }
 
+.left {
+    font-size: 20px;
+    padding: 0 10px;
+    vertical-align: top;
+    width: 30vw;
+    display: inline-block;
+    margin: 5vh 10vw;
+}
+.content {
+    margin: vh 0;
+}
+.right {
+    vertical-align: top;
+    display: inline-block;
+    width: 40vw;
+}
+.right img {
+    width: 350px;
+    height: 350px;
+    padding: 25px 25%;
+}
+.right1 {
+    font-size: 20px;
+    padding: 0 10px;
+    vertical-align: top;
+    width: 30vw;
+    display: inline-block;
+    margin-left: 15vw;
+    
+}
+.left1 {
+    vertical-align: top;
+    display: inline-block;
+    width: 40vw;
+}
+.left1 img {
+    width:350px;
+    height: 350px;
+    padding: 25px 25%;
+}
 
 #map {
    z-index: -1;
