@@ -10,7 +10,9 @@
 
 <center>
     <div id="map"></div>
-</center> <script>
+</center>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+          <script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -39,21 +41,21 @@
 
       </section>
       <section class="two">
-         <div class="left">
+         <div class="left hideme">
             <center><h2>ABOUT</h2></center>
             <div class="content">
                 <br>
                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
          </div>
-         <div class="right">
+         <div class="right hideme">
             <img src="google.png" height="20vh" width="20vh" alt="">
          </div>
         <br>
-         <div class="left1">
+         <div class="left1 hideme">
             <img src="google.png" height="20vh" width="20vh" alt="">
          </div>
-          <div class="right1">
+          <div class="right1 hideme">
             <center><h2>ABOUT</h2></center>
             <div class="content">
                 <br><br>
@@ -64,5 +66,21 @@
    <footer>
       <p>Made By Team HackOverFlow.</p>
    </footer>
+       <script>
+       /* On Scroll */
+           $(window).scroll(function() {
+               $('.hideme').each(function() {
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+        var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+        /* If the object is completely visible in the window, fade it in */
+        if( bottom_of_window > bottom_of_object ){
+
+            $(this).animate({'opacity':'1'},500);
+
+        }   
+               })
+           });
+       </script>
    </body>
 </html>

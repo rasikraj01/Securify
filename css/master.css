@@ -12,8 +12,7 @@ h2{
 
 .one img{
    position: relative;
-   height:20vh;
-
+   height: 20vh;
 }
 .one form{
    height: 10vh;
@@ -30,7 +29,7 @@ form input{
    background-color: transparent;
 }
 form button {
-   margin-left: 20px;
+  margin-left: 20px;
   border-radius: 6px;
   color: #ffffff;
   font-size: 20px;
@@ -133,3 +132,8 @@ footer p{
  left: 0;
  z-index: 0;
 }
+
+.hideme {
+    opacity: 0;  
+}
+
