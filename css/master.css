@@ -9,9 +9,10 @@
 h2{
    color: red;
 }
-.one h1 {
-    font-family: cursive;
-    color: #ffffff;
+
+.one{
+
+   //background: #FF425D;
 }
 .one img{
    position: relative;
@@ -20,12 +21,14 @@ h2{
 }
 .one form{
    height: 10vh;
-background: #ffffff;
-   margin-top:
+   background: #ffffff;
+   margin-top: 70vh;
+
 }
 form input{
-   height: 30px;
-   width: 70vh;
+   height: 50px;
+   width: 60vh;
+   border: solid #ff425d 2px;
 }
 form button {
    background: #e3e3e3;
@@ -33,7 +36,47 @@ form button {
 }
 .one{
    background: #F05B4A;
+   
 }
+.one{
+
+   background: #FF425D;
+}
+form button {
+   margin-left: 20px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 11px;
+  //background: #FF425D;
+  background-color: transparent;
+  color: #ff425d;
+  border: solid #ff425d 2px;
+  text-decoration: none;
+   -webkit-transition: all .25s;
+}
+::-webkit-input-placeholder {
+   color: #ff425d;
+   font-size: 15px;
+   //padding-left: 10px;
+}
+input:focus{
+   outline: none;
+   color:#ff425d;
+}
+input[type="text"], select{
+   padding-left: 15px;
+   font-size: 15px;
+   color:#ff42d;
+}
+button:hover {
+  background: white;
+  color: #FF425D;
+  text-decoration: none;
+   cursor: pointer;
+  padding: 10px;
+}
+
 .two{
    background: #fff;
 }
@@ -90,4 +133,11 @@ footer p{
     width:350px;
     height: 350px;
     padding: 25px 25%;
+}
+
+#map {
+   z-index: -1;
+   position: absolute;
+   height:100vh;
+   width: 100vw;
 }
