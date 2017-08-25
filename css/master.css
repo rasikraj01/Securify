@@ -16,8 +16,8 @@ h2{
 }
 .one form{
    height: 10vh;
-background: #ffffff;
-   margin-top:
+   background: #ffffff;
+
 }
 form input{
    height: 30px;
@@ -46,4 +46,10 @@ footer{
 
 footer p{
    padding: 10px;
+}
+
+
+#map {
+   height:100vh;
+   width: 100vw;
 }
