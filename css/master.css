@@ -27,6 +27,7 @@ h2{
 form input{
    height: 50px;
    width: 60vh;
+   border-radius: 5px;
    border: solid #ff425d 2px;
 }
 form button {
