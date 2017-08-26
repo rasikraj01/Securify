@@ -47,7 +47,7 @@ var targetLL;
             console.log(loc + "locatop");
               $.get("http://webhose.io/filterWebContent?token=05e31117-ac3c-4128-800f-79b98b58af9f&format=json&sort=crawled&q=%22chicago%22(title%3A'murder')%20language%3Aenglish%20site_type%3Anews" , function(data) {
                   console.log("found " + data.posts.length + " rows");
-                  $('#count').append("Number of crimes reported nearby in the last 7 days = "+data.posts.length + " !");
+                  $('#count').append("<p>Number of crimes reported nearby in the last 7 days = "+data.posts.length + " !</p>");
               });
           } else {
             window.alert('No results found');
@@ -92,7 +92,7 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
         }
                })
            });
-           
+
 
 
          //   $(document).ready(function() {
@@ -105,6 +105,5 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
          //   });
 
 $(function () {
-    
-})         
-          
+
+})
