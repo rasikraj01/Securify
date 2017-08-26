@@ -12,7 +12,28 @@
     <div id="map"></div>
 </center>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+          <script src="myrows.js"></script>
           <script>
+           var x = mydata.data[0];
+              console.log(x[10]);
+          </script>
+          <script>
+     function showinrange(a,b) {
+         //console.log("in range");
+         i=0;
+         ctr=0;
+         for(i=0;i<100;i++) {
+            var x = mydata.data[i];
+            dist = getDistanceFromLatLonInKm(a,b,x[22],x[23]);
+            if(dist<5)
+               { 
+                   console.log(x[10]);
+                   ctr=1;
+               }
+        }
+         if(ctr==0)
+                 console.log("none");
+    }          
       var targetLL;
       var map;
       var loc;
@@ -30,6 +51,27 @@
          map.addListener('click', function(e) {
           map.panTo(e.latLng);
           targetLL = e.latLng;
+         console.log(targetLL.lat());
+        showinrange(targetLL.lat() , targetLL.lng());
+         });
+      }
+    function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+   var R = 6371; // Radius of the earth in km
+   var dLat = deg2rad(lat2-lat1);  // deg2rad below
+   var dLon = deg2rad(lon2-lon1); 
+   var a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ; 
+   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+   var d = R * c; // Distance in km
+   return d;
+ }
+
+    function deg2rad(deg) {
+  return deg * (Math.PI/180);
+}
           var geocoder = new google.maps.Geocoder;
           geocoder.geocode({'location': targetLL}, function(results, status){
             if (status === 'OK') {
@@ -82,7 +124,7 @@
    <footer>
       <p>Made By Team HackOverFlow.</p>
    </footer>
-       <script>
+       <script>96
        /* On Scroll */
            $(window).scroll(function() {
                $('.hideme').each(function() {
