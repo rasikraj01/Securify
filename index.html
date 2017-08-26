@@ -2,10 +2,13 @@
 <html>
    <head>
       <link rel="stylesheet" href="css/master.css">
+
       <meta charset="utf-8">
       <title></title>
+
+
    </head>
-   <body>
+      <body>
       <section class="one">
 
 <center>
@@ -26,14 +29,14 @@
             var x = mydata.data[i];
             dist = getDistanceFromLatLonInKm(a,b,x[22],x[23]);
             if(dist<5)
-               { 
+               {
                    console.log(x[10]);
                    ctr=1;
                }
         }
          if(ctr==0)
                  console.log("none");
-    }          
+    }
       var targetLL;
       var map;
       var loc;
@@ -53,18 +56,34 @@
           targetLL = e.latLng;
          console.log(targetLL.lat());
         showinrange(targetLL.lat() , targetLL.lng());
+
+
+        var geocoder = new google.maps.Geocoder;
+        geocoder.geocode({'location': targetLL}, function(results, status){
+          if (status === 'OK') {
+          if (results[0]) {
+            loc = results[0].formatted_address;
+            console.log(loc + "locatop");
+          } else {
+            window.alert('No results found');
+          }
+        } else {
+          window.alert('Geocoder failed due to: ' + status);
+        }
+
+     });
          });
       }
     function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
    var R = 6371; // Radius of the earth in km
    var dLat = deg2rad(lat2-lat1);  // deg2rad below
-   var dLon = deg2rad(lon2-lon1); 
-   var a = 
+   var dLon = deg2rad(lon2-lon1);
+   var a =
     Math.sin(dLat/2) * Math.sin(dLat/2) +
-    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
     Math.sin(dLon/2) * Math.sin(dLon/2)
-    ; 
-   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+    ;
+   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
    var d = R * c; // Distance in km
    return d;
  }
@@ -72,25 +91,22 @@
     function deg2rad(deg) {
   return deg * (Math.PI/180);
 }
-          var geocoder = new google.maps.Geocoder;
-          geocoder.geocode({'location': targetLL}, function(results, status){
-            if (status === 'OK') {
-            if (results[0]) {
-              loc = results[0].formatted_address;
-            } else {
-              window.alert('No results found');
-            }
-          } else {
-            window.alert('Geocoder failed due to: ' + status);
-          }
 
-          })
-         });
-      }
+
+
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAfy-L4uWS2SxQgFVNUOOX5K4vAm4Swk4&callback=initMap"
     async defer></script>
+
+    <div id="loader-wrapper">
+      <div id="loader"></div>
+
+      <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+
+    </div>
+
 
     <center>
        <div class="button">START</div>
@@ -143,6 +159,18 @@
               $('#map').css({'filter': 'blur(0px)'});
               $(this).css({'display': 'none'});
            });
+
+
+         //   $(document).ready(function() {
+           //
+         //      setTimeout(function(){
+         //         $('body').addClass('loaded');
+         //         $('h1').css('color','#222222');
+         //      }, 3000);
+           //
+         //   });
+
+      
        </script>
    </body>
 </html>
