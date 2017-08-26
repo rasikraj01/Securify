@@ -36,6 +36,7 @@
     }          
       var targetLL;
       var map;
+      var loc;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: {lat: 0, lng: 0},
@@ -71,6 +72,22 @@
     function deg2rad(deg) {
   return deg * (Math.PI/180);
 }
+          var geocoder = new google.maps.Geocoder;
+          geocoder.geocode({'location': targetLL}, function(results, status){
+            if (status === 'OK') {
+            if (results[0]) {
+              loc = results[0].formatted_address;
+            } else {
+              window.alert('No results found');
+            }
+          } else {
+            window.alert('Geocoder failed due to: ' + status);
+          }
+
+          })
+         });
+      }
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAfy-L4uWS2SxQgFVNUOOX5K4vAm4Swk4&callback=initMap"
     async defer></script>
