@@ -78,7 +78,7 @@ footer p{
     vertical-align: top;
     width: 30vw;
     display: inline-block;
-    margin: 5vh 10vw;
+    margin: 100px 10vw;
 }
 .content {
     margin: vh 0;
@@ -91,11 +91,12 @@ footer p{
 .right img {
     width: 350px;
     height: 350px;
-    padding: 25px 25%;
+    padding: 100px 25%;
 }
 .right1 {
     font-size: 20px;
     padding: 0 10px;
+    margin-top: 100px;
     vertical-align: top;
     width: 30vw;
     display: inline-block;
@@ -121,7 +122,7 @@ footer p{
  position:absolute;
  top: 0;
  left: 0;
- z-index: 0;
+ z-index: 1;
 
   -webkit-transition: all .25s;
 }
@@ -134,7 +135,16 @@ footer p{
 #count {
     width: 100%;
     display: block;
-    background: #efefef;
+    height: 10vh;
+    color: #122232;
+    z-index: 1000;
+    text-align: center;
+}
+#count p{
+   margin-top: -200px;
+   padding: 15px;
+   padding-bottom: 40px;
+   font-size: 30px;
     height: 10vh;
     color: #122232;
     z-index: 1000;
@@ -142,9 +152,12 @@ footer p{
 
 #myChart {
    -webkit-transform:scale(0.5);
-   margin-top: 40vh;
+   margin-top: 70vh;
+   height: 200px;
+   font-size: 25px;
 }
-
+.canvasjs-chart-canvas{
+   font-family: 'Roboto';
+}
 #count p{
-   padding: 15px;
-}
+   padding: 15px;}
