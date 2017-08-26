@@ -1,16 +1,17 @@
 var x = mydata.data[0];
+var counter = new Array(7);
+for(i=0;i<7;i++)
+     counter[i] = 0;
+
 console.log(x[10]);
 
   function showinrange(a,b) {
          //console.log("in range");
+          
          cr1=0;cr2=0;cr3=0;cr4=0;cr5=0;
          i=0;
          ctr=0;
-         for(i=0;i<1000;i++) {
-            var x = mydata.dat[i];
-             
-             
-             
+         for(i=0;i<1000;i++) { 
             var x = mydata.data[i];
             dist = getDistanceFromLatLonInKm(a,b,x[22],x[23]);
             if(dist<5)
@@ -28,18 +29,26 @@ console.log(x[10]);
                  cr4++;
              if(x[12] == "ASSAULT")
                  cr5++;
-
-
+            str = x[9];
+             strr = str[5]+str[6];
+             str_int = parseInt(strr);
+             console.log(str,strr,str_int);
+             if(str_int%2==0)
+                 {
+                     counter[(str_int)/2]++;
+                 }
+             
         }
          if(ctr==0)
                  console.log("none");
-         }
+         
       crr1 = (cr1*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr2 = (cr2*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr3 = (cr3*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr4 = (cr4*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr5 = (cr5*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       //console.log(cr1,cr2,cr3,cr4,cr5);
+        makebar();
       makegraph();
 }
 
