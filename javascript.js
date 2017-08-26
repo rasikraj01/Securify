@@ -11,12 +11,14 @@ var x = mydata.data[0];
          i=0;
          ctr=0;
          for(i=0;i<1000;i++) {
-
+            var x = mydata.dat[i];
+             
              
              
         }
          if(ctr==0)
                  console.log("none");
+         }
       crr1 = (cr1*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr2 = (cr2*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr3 = (cr3*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
@@ -25,6 +27,7 @@ var x = mydata.data[0];
       //console.log(cr1,cr2,cr3,cr4,cr5);
       makegraph();
 }
+
 
 var targetLL;
       var map;
