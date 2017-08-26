@@ -7,11 +7,11 @@ console.log(x[10]);
 
   function showinrange(a,b) {
          //console.log("in range");
-          
+
          cr1=0;cr2=0;cr3=0;cr4=0;cr5=0;
          i=0;
          ctr=0;
-         for(i=0;i<1000;i++) { 
+         for(i=0;i<1000;i++) {
             var x = mydata.data[i];
             dist = getDistanceFromLatLonInKm(a,b,x[22],x[23]);
             if(dist<5)
@@ -37,11 +37,11 @@ console.log(x[10]);
                  {
                      counter[(str_int)/2]++;
                  }
-             
+
         }
          if(ctr==0)
                  console.log("none");
-         
+
       crr1 = (cr1*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr2 = (cr2*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
       crr3 = (cr3*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
