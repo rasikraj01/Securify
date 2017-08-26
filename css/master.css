@@ -121,3 +121,11 @@ footer p{
 .hideme {
     opacity: 0;
 }
+#count {
+    width: 100%;
+    display: block;
+    background: red;
+    height: 10vh;
+    color: white;
+    z-index: 1000;
+}
