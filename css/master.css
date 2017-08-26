@@ -129,3 +129,7 @@ footer p{
     color: white;
     z-index: 1000;
 }
+#myChart {
+   -webkit-transform:scale(0.3);
+   margin-top: 30vh;
+}

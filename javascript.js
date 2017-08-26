@@ -1,21 +1,21 @@
 var x = mydata.data[0];
-console.log(x[10]);
 
   function showinrange(a,b) {
          //console.log("in range");
-         i=0;
-         ctr=0;
-         for(i=0;i<100;i++) {
+         var i=0;
+         var ctr=0;
+         for(i=0;i<10000;i++) {
             var x = mydata.data[i];
             dist = getDistanceFromLatLonInKm(a,b,x[22],x[23]);
             if(dist<5)
                {
-                   console.log(x[10]);
-                   ctr=1;
+                  ctr++;  
                }
         }
-         if(ctr==0)
-                 console.log("none");
+        console.log(ctr);
+
+
+        
 }
 
 var targetLL;
@@ -35,7 +35,7 @@ var targetLL;
          map.addListener('click', function(e) {
           map.panTo(e.latLng);
           targetLL = e.latLng;
-         console.log(targetLL.lat());
+
         showinrange(targetLL.lat() , targetLL.lng());
 
 
@@ -43,9 +43,9 @@ var targetLL;
         geocoder.geocode({'location': targetLL}, function(results, status){
           if (status === 'OK') {
           if (results[0]) {
-            loc = results[0].formatted_address;
-            console.log(loc + "locatop");
-              $.get("http://webhose.io/filterWebContent?token=05e31117-ac3c-4128-800f-79b98b58af9f&format=json&sort=crawled&q=%22chicago%22(title%3A'murder')%20language%3Aenglish%20site_type%3Anews" , function(data) {
+              
+              loc = results[0].address_components[2].long_name;
+              $.get("http://webhose.io/filterWebContent?token=05e31117-ac3c-4128-800f-79b98b58af9f&format=json&sort=crawled&q=%22"+loc+"%22(title%3A'murder')%20language%3Aenglish%20site_type%3Anews" , function(data) {
                   console.log("found " + data.posts.length + " rows");
                   $('#count').append("Number of crimes reported nearby in the last 7 days = "+data.posts.length + " !");
               });
@@ -104,7 +104,3 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
            //
          //   });
 
-$(function () {
-    
-})         
-          
