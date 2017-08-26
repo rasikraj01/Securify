@@ -31,21 +31,23 @@
       <canvas id="myChart" width="100" height="100"></canvas>
       </div>
 <script>
+    function makebar() {
 var ctx = document.getElementById("myChart").getContext('2d');
+        console.log("counter="+counter[1]);
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ["Theft", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [{
             label: 'crimes',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [counter[1], counter[2], counter[3], counter[4], counter[5], counter[6] ],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 99, 132, 0.8)',
+                'rgba(54, 162, 235, 0.8)',
+                'rgba(255, 206, 86, 0.8)',
+                'rgba(75, 192, 192, 0.8)',
+                'rgba(153, 102, 255, 0.8)',
+                'rgba(255, 159, 64, 0.8)'
             ],
             borderColor: [
                 'rgba(255,99,132,1)',
@@ -71,7 +73,7 @@ var myChart = new Chart(ctx, {
             }]
         }
     }
-});
+});}
 </script>
 
       </section>

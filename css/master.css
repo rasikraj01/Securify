@@ -141,8 +141,8 @@ footer p{
 }
 
 #myChart {
-   -webkit-transform:scale(0.3);
-   margin-top: 30vh;
+   -webkit-transform:scale(0.5);
+   margin-top: 40vh;
 }
 
 #count p{
