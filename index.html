@@ -20,17 +20,12 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAfy-L4uWS2SxQgFVNUOOX5K4vAm4Swk4&callback=initMap"
     async defer></script>
 
-    <div id="loader-wrapper">
-      <div id="loader"></div>
-
-      <div class="loader-section section-left"></div>
-          <div class="loader-section section-right"></div>
-
-    </div>
-
 
     <center>
-       <div class="button">START</div>
+
+                  <div class="company">Securify</div>
+      <div class="logo"><img src="logo.png" alt=""></div>
+       <div class="button"><div class="lol">START</div></div>
     </center>
       <div class="chart-container" style= "position: relative;" height = "200" width = "200">
       <canvas id="myChart" width="100" height="100"></canvas>
@@ -84,6 +79,7 @@ var myChart = new Chart(ctx, {
           <div id="count">
 
           </div>
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
          <div class="left hideme">
             <center><h2>ABOUT</h2></center>
             <div class="content">
@@ -110,12 +106,58 @@ var myChart = new Chart(ctx, {
       <p>Made By Team HackOverFlow.</p>
    </footer>
 
+          <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
           <script>
           $('.button').click(function () {
               console.log("hello");
                $('#map').css({'filter': 'blur(0px)'});
               $(this).css({'display': 'none'});
+              $('.logo').css({'display': 'none'});
+
+              $('.company').css({'display': 'none'});
            });
           </script>
+          
+          <script>
+          function makegraph() {
+              
+             var chart = new CanvasJS.Chart("chartContainer",
+	{
+		title:{
+			text: "Desktop Search Engine Market Share, Dec-2012"
+		},
+                animationEnabled: true,
+		legend:{
+			verticalAlign: "center",
+			horizontalAlign: "left",
+			fontSize: 20,
+			fontFamily: "Helvetica"        
+		},
+		theme: "theme2",
+		data: [
+		{        
+			type: "pie",       
+			indexLabelFontFamily: "Garamond",       
+			indexLabelFontSize: 20,
+			indexLabel: "{label} {y}%",
+			startAngle:-20,      
+			showInLegend: true,
+			toolTipContent:"{legendText} {y}%",
+			dataPoints: [
+				{  y: crr1, legendText:"Theft", label: "THEFT" },
+				{  y: crr2, legendText:"Deceptive Practice", label: "DECEPTIVE PRACTICE!" },
+				{  y: crr3, legendText:"Burglary", label: "BURGLARY" },
+				{  y: crr4, legendText:"Criminal Trespass" , label: "CRIMINAL TRESPASS"},       
+				{  y: crr5, legendText:"Others" , label: "Others"}
+			]
+		}
+		]
+	});
+	chart.render();
+} 
+          </script>
+           
+          
    </body>
 </html>
+

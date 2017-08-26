@@ -2,20 +2,28 @@ var x = mydata.data[0];
 
   function showinrange(a,b) {
          //console.log("in range");
+
          var i=0;
          var ctr=0;
          for(i=0;i<10000;i++) {
-            var x = mydata.data[i];
-            dist = getDistanceFromLatLonInKm(a,b,x[22],x[23]);
-            if(dist<5)
-               {
-                  ctr++;  
-               }
+
+         cr1=0;cr2=0;cr3=0;cr4=0;cr5=0;
+         i=0;
+         ctr=0;
+         for(i=0;i<1000;i++) {
+
+             
+             
         }
-        console.log(ctr);
-
-
-        
+         if(ctr==0)
+                 console.log("none");
+      crr1 = (cr1*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
+      crr2 = (cr2*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
+      crr3 = (cr3*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
+      crr4 = (cr4*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
+      crr5 = (cr5*100/(cr1+cr2+cr3+cr4+cr5)).toPrecision(4);
+      //console.log(cr1,cr2,cr3,cr4,cr5);
+      makegraph();
 }
 
 var targetLL;
@@ -47,7 +55,7 @@ var targetLL;
               loc = results[0].address_components[2].long_name;
               $.get("http://webhose.io/filterWebContent?token=05e31117-ac3c-4128-800f-79b98b58af9f&format=json&sort=crawled&q=%22"+loc+"%22(title%3A'murder')%20language%3Aenglish%20site_type%3Anews" , function(data) {
                   console.log("found " + data.posts.length + " rows");
-                  $('#count').append("Number of crimes reported nearby in the last 7 days = "+data.posts.length + " !");
+                  $('#count').append("<p>Number of crimes reported nearby in the last 7 days = "+data.posts.length + " !</p>");
               });
           } else {
             window.alert('No results found');
@@ -92,7 +100,7 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
         }
                })
            });
-           
+
 
 
          //   $(document).ready(function() {

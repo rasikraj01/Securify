@@ -11,35 +11,51 @@ h2{
     font-size: 50px;
     font-weight: 300;
 }
-
 .one img{
    position: relative;
+   margin-top: 15vh;
    height: 20vh;
 }
-
-.button {
-  //margin-left: 20px;
-  border-radius: 6px;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 11px;
-  //background: #FF425D;
-  background-color: transparent;
-  color: #ff425d;
-  border: solid #ff425d 2px;
-  text-decoration: none;
-    width: 6vw;
-    margin-left:45%;
-    margin-top: 70vh;
-    position: absolute;
-   -webkit-transition: all .25s;
+.logo{
+   margin-top: 30vh;
 }
-.button:hover {
-  background: white;
-  color: #FF425D;
-  text-decoration: none;
-   cursor: pointer;
-  padding: 10px;
+.button {
+   width: 6vw;
+    margin-top: 20vh;
+    position: absolute;
+   left:50%;
+   z-index: 100;
+}
+
+.company{
+   position: absolute;
+       font-weight: 200;
+       color: #ff425d;
+       width: 100vw;
+       text-align: center;
+       font-size: 50px;
+       z-index: 100000;
+}
+.lol{
+   position: relative;
+   left: -50%;
+
+
+   border-radius: 6px;
+   color: #ffffff;
+   font-size: 20px;
+   padding: 11px;
+   background-color: transparent;
+   color: #ff425d;
+   border: solid #ff425d 2px;
+   -webkit-transition: all .25s;
+   text-decoration: none;
+
+}
+.lol:hover {
+  background: #FF425D;
+  color: white;
+  cursor: pointer;
 }
 
 section{
@@ -84,7 +100,6 @@ footer p{
     width: 30vw;
     display: inline-block;
     margin-left: 15vw;
-
 }
 .left1 {
     vertical-align: top;
@@ -100,11 +115,6 @@ footer p{
    font-weight: 100;
 }
 #map {
-   /*z-index: -1;
-   //position: absolute;
-   margin-top: 10vh;
-   height: 70vh;
-   width: 80vw;*/
    filter: blur(3px);
    height: 100%;
  width: 100%;
@@ -124,12 +134,17 @@ footer p{
 #count {
     width: 100%;
     display: block;
-    background: red;
+    background: #efefef;
     height: 10vh;
-    color: white;
+    color: #122232;
     z-index: 1000;
 }
+
 #myChart {
    -webkit-transform:scale(0.3);
    margin-top: 30vh;
+}
+
+#count p{
+   padding: 15px;
 }
