@@ -11,9 +11,9 @@ h2{
     font-size: 50px;
     font-weight: 300;
 }
-
 .one img{
    position: relative;
+   margin-top: 15vh;
    height: 20vh;
 }
 .logo{
@@ -21,10 +21,20 @@ h2{
 }
 .button {
    width: 6vw;
-    margin-top: 10vh;
+    margin-top: 20vh;
     position: absolute;
    left:50%;
    z-index: 100;
+}
+
+.company{
+   position: absolute;
+       font-weight: 200;
+       color: #ff425d;
+       width: 100vw;
+       text-align: center;
+       font-size: 50px;
+       z-index: 100000;
 }
 .lol{
    position: relative;
@@ -43,8 +53,8 @@ h2{
 
 }
 .lol:hover {
-  background: white;
-  color: #FF425D;
+  background: #FF425D;
+  color: white;
   cursor: pointer;
 }
 
@@ -105,11 +115,6 @@ footer p{
    font-weight: 100;
 }
 #map {
-   /*z-index: -1;
-   //position: absolute;
-   margin-top: 10vh;
-   height: 70vh;
-   width: 80vw;*/
    filter: blur(3px);
    height: 100%;
  width: 100%;
@@ -137,3 +142,4 @@ footer p{
 #count p{
    padding: 15px;
 }
+
