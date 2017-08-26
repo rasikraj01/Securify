@@ -20,16 +20,10 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCAfy-L4uWS2SxQgFVNUOOX5K4vAm4Swk4&callback=initMap"
     async defer></script>
 
-    <div id="loader-wrapper">
-      <div id="loader"></div>
 
-      <div class="loader-section section-left"></div>
-          <div class="loader-section section-right"></div>
-
-    </div>
-
-   <div class="company">Securify</div>
     <center>
+
+                  <div class="company">Securify</div>
       <div class="logo"><img src="logo.png" alt=""></div>
        <div class="button"><div class="lol">START</div></div>
     </center>
@@ -72,7 +66,10 @@
                $('#map').css({'filter': 'blur(0px)'});
               $(this).css({'display': 'none'});
               $('.logo').css({'display': 'none'});
+
+              $('.company').css({'display': 'none'});
            });
           </script>
    </body>
 </html>
+
