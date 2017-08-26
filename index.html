@@ -37,7 +37,7 @@ var ctx = document.getElementById("myChart").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Theft", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["Jan", "Mar", "May", "July", "Sept", "Dec"],
         datasets: [{
             label: 'crimes',
             data: [counter[1], counter[2], counter[3], counter[4], counter[5], counter[6] ],
@@ -62,14 +62,14 @@ var myChart = new Chart(ctx, {
     },
     options: {
         scales: {
-
             xAxes: [{
-               stacked: true
+               stacked: true,
+               ticks: {
+                  fontSize: 30
+               }
             }],
             yAxes: [{
-
                 stacked: true
-
             }]
         }
     }
@@ -88,13 +88,6 @@ var myChart = new Chart(ctx, {
                 <br>
                Find centralized location based crime data instantly.
 		 </div>
-         </div>
-         <div class="right hideme">
-            <img src="google.png" height="20vh" width="20vh" alt="">
-         </div>
-        <br>
-         <div class="left1 hideme">
-            <img src="google.png" height="20vh" width="20vh" alt="">
          </div>
           <div class="right1 hideme">
             <center><h2>HOW IT WORKS</h2></center>
@@ -115,51 +108,49 @@ var myChart = new Chart(ctx, {
                $('#map').css({'filter': 'blur(0px)'});
               $(this).css({'display': 'none'});
               $('.logo').css({'display': 'none'});
-
               $('.company').css({'display': 'none'});
            });
           </script>
-          
+
           <script>
           function makegraph() {
-              
+
              var chart = new CanvasJS.Chart("chartContainer",
 	{
 		title:{
-			text: "Desktop Search Engine Market Share, Dec-2012"
+			text: "Crimes in 2016"
 		},
                 animationEnabled: true,
 		legend:{
 			verticalAlign: "center",
 			horizontalAlign: "left",
 			fontSize: 20,
-			fontFamily: "Helvetica"        
+			fontFamily: "Helvetica"
 		},
 		theme: "theme2",
 		data: [
-		{        
-			type: "pie",       
-			indexLabelFontFamily: "Garamond",       
+		{
+			type: "pie",
+			indexLabelFontFamily: "Garamond",
 			indexLabelFontSize: 20,
 			indexLabel: "{label} {y}%",
-			startAngle:-20,      
+			startAngle:-20,
 			showInLegend: true,
 			toolTipContent:"{legendText} {y}%",
 			dataPoints: [
 				{  y: crr1, legendText:"Theft", label: "THEFT" },
 				{  y: crr2, legendText:"Deceptive Practice", label: "DECEPTIVE PRACTICE!" },
 				{  y: crr3, legendText:"Burglary", label: "BURGLARY" },
-				{  y: crr4, legendText:"Criminal Trespass" , label: "CRIMINAL TRESPASS"},       
+				{  y: crr4, legendText:"Criminal Trespass" , label: "CRIMINAL TRESPASS"},
 				{  y: crr5, legendText:"Others" , label: "Others"}
 			]
 		}
 		]
 	});
 	chart.render();
-} 
+}
           </script>
-           
-          
+
+
    </body>
 </html>
-
