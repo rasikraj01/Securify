@@ -34,6 +34,7 @@
           <div id="count">
 
           </div>
+          <div id="chartContainer" style="height: 300px; width: 100%;"></div>
          <div class="left hideme">
             <center><h2>ABOUT</h2></center>
             <div class="content">
@@ -60,6 +61,7 @@
       <p>Made By Team HackOverFlow.</p>
    </footer>
 
+          <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
           <script>
           $('.button').click(function () {
               console.log("hello");
@@ -70,6 +72,47 @@
               $('.company').css({'display': 'none'});
            });
           </script>
+          
+          <script>
+          function makegraph() {
+              
+             var chart = new CanvasJS.Chart("chartContainer",
+	{
+		title:{
+			text: "Desktop Search Engine Market Share, Dec-2012"
+		},
+                animationEnabled: true,
+		legend:{
+			verticalAlign: "center",
+			horizontalAlign: "left",
+			fontSize: 20,
+			fontFamily: "Helvetica"        
+		},
+		theme: "theme2",
+		data: [
+		{        
+			type: "pie",       
+			indexLabelFontFamily: "Garamond",       
+			indexLabelFontSize: 20,
+			indexLabel: "{label} {y}%",
+			startAngle:-20,      
+			showInLegend: true,
+			toolTipContent:"{legendText} {y}%",
+			dataPoints: [
+				{  y: crr1, legendText:"Theft", label: "THEFT" },
+				{  y: crr2, legendText:"Deceptive Practice", label: "DECEPTIVE PRACTICE!" },
+				{  y: crr3, legendText:"Burglary", label: "BURGLARY" },
+				{  y: crr4, legendText:"Criminal Trespass" , label: "CRIMINAL TRESPASS"},       
+				{  y: crr5, legendText:"Others" , label: "Others"}
+			]
+		}
+		]
+	});
+	chart.render();
+} 
+          </script>
+           
+          
    </body>
 </html>
 
