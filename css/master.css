@@ -16,30 +16,36 @@ h2{
    position: relative;
    height: 20vh;
 }
-
-.button {
-  //margin-left: 20px;
-  border-radius: 6px;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 11px;
-  //background: #FF425D;
-  background-color: transparent;
-  color: #ff425d;
-  border: solid #ff425d 2px;
-  text-decoration: none;
-    width: 6vw;
-    margin-left:45%;
-    margin-top: 70vh;
-    position: absolute;
-   -webkit-transition: all .25s;
+.logo{
+   margin-top: 30vh;
 }
-.button:hover {
+.button {
+   width: 6vw;
+    margin-top: 10vh;
+    position: absolute;
+   left:50%;
+   z-index: 100;
+}
+.lol{
+   position: relative;
+   left: -50%;
+
+
+   border-radius: 6px;
+   color: #ffffff;
+   font-size: 20px;
+   padding: 11px;
+   background-color: transparent;
+   color: #ff425d;
+   border: solid #ff425d 2px;
+   -webkit-transition: all .25s;
+   text-decoration: none;
+
+}
+.lol:hover {
   background: white;
   color: #FF425D;
-  text-decoration: none;
-   cursor: pointer;
-  padding: 10px;
+  cursor: pointer;
 }
 
 section{
@@ -84,7 +90,6 @@ footer p{
     width: 30vw;
     display: inline-block;
     margin-left: 15vw;
-
 }
 .left1 {
     vertical-align: top;
@@ -124,8 +129,11 @@ footer p{
 #count {
     width: 100%;
     display: block;
-    background: red;
+    background: #efefef;
     height: 10vh;
-    color: white;
+    color: #122232;
     z-index: 1000;
+}
+#count p{
+   padding: 15px;
 }
